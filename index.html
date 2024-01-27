@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Dad!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #73c8a9, #377ba8); /* Gradient background */
+            color: #ffffff;
+        }
+
+        #container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            max-width: 600px;
+            text-align: center;
+            overflow-y: auto; /* Make the card scrollable */
+            max-height: 80vh; /* Set maximum height for the card */
+            display: none;
+        }
+
+        .card.active {
+            display: block;
+        }
+
+        #header {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #e74c3c; /* Red header color */
+        }
+
+        #message {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #34495e; /* Darker color for better readability */
+        }
+
+        #image-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .image {
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transform: scale(1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image:hover {
+            transform: scale(1.1);
+        }
+
+        #footer {
+            font-size: 14px;
+            color: #95a5a6; /* Light gray footer color */
+            margin-top: 20px;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .navigation-button {
+            background-color: #e74c3c;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .navigation-button:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="card0" class="card active">
+            <div id="header">
+                Happy Birthday, Dad!
+            </div>
+
+            <div id="image-container">
+                <!-- Add link to your picture -->
+                <img src="Resources/Index_pic.jpg" alt="Birthday Picture Index" class="image" style="max-width: 300px;">
+            </div>
+
+            <div class="navigation-buttons">
+                <button class="navigation-button" onclick="navigateToPage('card1')">Next</button>
+            </div>
+
+            <div id="footer" style="color: #34495e; font-size: 18px;"> <!-- Use the color code that you prefer and adjust font-size -->
+                I love you, <br>
+                Your favorite son, and I guess only
+            </div>
+        </div>
+
+        
+        <div id="card1" class="card">
+            <div id="message">
+                <p>This might not be as personal as a handwritten card however, </p>
+                <p>I wanted to show you some stuff I have learned, and give you a card in a way you have never received.</p>
+                <p>So here is your birthday card!</p>
+            </div>
+
+            <div id="image-container">
+                <!-- Add link to your picture -->
+                <img src="Resources/Page_1_Pic.jpg" alt="Birthday Picture Page 2" class="image" style="max-width: 300px;">
+            </div>
+
+            <div class="navigation-buttons">
+                <button class="navigation-button" onclick="navigateToPage('card0')">Previous</button>
+                <button class="navigation-button" onclick="navigateToPage('card2')">Next</button>
+            </div>
+        </div>
+
+
+
+        <div id="card2" class="card">
+            <div id="message">
+                <p>Dear Dad,</p>
+                <p>Happy Birthday pops. Thank you for everything you do for me every day. Even though I'm not with you or see you every day you still help me in many ways.</p>
+                <p>From the things you have taught me growing up, I have developed into what I think is a decent man, and I can only thank you for that. You taught me how to respect others, put people before myself, and how to have a good work ethic and attitude which I am thankful for.</p>
+                <p>From the way you taught or I guess just talked about money around me. I know you helped a lot with college and other things, but I am very thankful to be debt-free and I really can only thank you. For your guidance, knowledge, and help. I know you have put most of your life towards your wealth to provide for your family and I am extremely grateful to have a father who thinks that far in the future and wants to provide the best life possible for his family. Which brings me to the next page :)</p>
+            </div>
+
+            <div id="image-container">
+                <!-- Add link to your picture -->
+                <img src="Resources/Page_2_Pic.JPG" alt="Birthday Picture Page 3" class="image" style="max-width: 300px;">
+            </div>
+
+            <div class="navigation-buttons">
+                <button class="navigation-button" onclick="navigateToPage('card1')">Previous</button>
+                <button class="navigation-button" onclick="navigateToPage('card3')">Next</button>
+            </div>
+        </div>
+
+        <div id="card3" class="card">
+            <div id="message">
+                <p>I didn't know as a kid, but thank you for providing us a fantastic childhood.</p>
+                <p>Anytime I talk to people about all the places I have visited they are shocked. Costa Rica and all of the islands we have visited, the Wild West trip where we saw amazing sites and hiked the Grand Canyon, where I thought you were going to die, all the skiing trips, and Spain.</p>
+                <p>You have given me the opportunity to see much more of the world than many people see in their lives and I'm only 24. So to my knowledge, you did a damn good job as a father and I couldn't have asked for anything else. I thought it was appropriate to include a picture of the RGB's because you both did an incredible job raising their kids and I strive to do the same. </p>
+                <p>I could continue to many other thinks like baseball, but don't want to create a book. I hope you have a great day! Don't work too much, have some good tequila, and I love ya!</p>
+            </div>
+
+            <div id="image-container">
+                <!-- Add link to your picture -->
+                <img src="Resources/Page_3_PIc.jpg" alt="Birthday Picture Page 4" class="image" style="max-width: 300px;">
+            </div>
+
+            <div class="navigation-buttons">
+                <button class="navigation-button" onclick="navigateToPage('card2')">Previous</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function navigateToPage(cardId) {
+            document.querySelectorAll(".card").forEach(card => card.classList.remove("active"));
+            document.getElementById(cardId).classList.add("active");
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
